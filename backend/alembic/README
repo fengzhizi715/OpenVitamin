@@ -1,0 +1,12 @@
+Alembic 迁移脚本目录（与 ORM 迁移计划 ADR 一致）。
+
+- env.py 使用 core.data.base 的 get_engine() 与 Base.metadata，无需在 alembic.ini 里重复配置 URL。
+- 请在 backend 目录下、且使用项目虚拟环境执行 alembic 命令，例如：
+
+  conda activate ai-inference-platform
+  cd backend
+  alembic revision --autogenerate -m "描述"
+  alembic upgrade head
+
+  # 或一条命令：
+  conda run -n ai-inference-platform bash -c "cd backend && alembic upgrade head"

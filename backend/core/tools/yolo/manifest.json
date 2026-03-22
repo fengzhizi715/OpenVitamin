@@ -1,0 +1,19 @@
+{
+  "tool_id": "vision.detect_objects",
+  "name": "Object Detection (YOLO)",
+  "description": "Detect objects in an image using YOLO backends",
+  "capabilities": ["vision.object_detection"],
+  "supported_backends": ["yolov8", "yolov11", "yolov26", "onnx"],
+  "arguments": {
+    "image": { "type": "image", "required": true },
+    "confidence_threshold": { "type": "number", "default": 0.25 },
+    "backend": {
+      "type": "string",
+      "enum": ["yolov8", "yolov11", "yolov26", "onnx"],
+      "required": false
+    }
+  },
+  "defaults": {
+    "backend": "yolov8"
+  }
+}

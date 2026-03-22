@@ -1,0 +1,52 @@
+{
+  "name": "rag",
+  "version": "1.0.0",
+  "description": "Retrieval-Augmented Generation: retrieve context from knowledge base and inject into messages",
+  "entry": "core.plugins.builtin.rag.plugin:RAGPlugin",
+  "type": "capability",
+  "stage": "pre",
+  "supported_modes": ["chat", "agent"],
+  "permissions": [],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "messages": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "role": {"type": "string"},
+            "content": {"type": "string"}
+          },
+          "required": ["role", "content"]
+        }
+      },
+      "rag": {
+        "type": "object",
+        "properties": {
+          "knowledge_base_id": {"type": "string"},
+          "top_k": {"type": "integer", "default": 5, "minimum": 1, "maximum": 50},
+          "score_threshold": {"type": "number", "default": 1.2, "minimum": 0, "maximum": 2}
+        },
+        "required": ["knowledge_base_id"]
+      }
+    },
+    "required": ["messages", "rag"]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "messages": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "role": {"type": "string"},
+            "content": {"type": "string"}
+          }
+        }
+      }
+    },
+    "required": ["messages"]
+  }
+}

@@ -1,0 +1,128 @@
+# Backend - Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+*.venv
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-workspace
+*.sublime-project
+.project
+.pydevproject
+.settings/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Backend - Conda
+conda-env/
+.conda/
+
+# Backend - Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Frontend - Node
+frontend/node_modules/
+frontend/dist/
+frontend/.dist/
+frontend/build/
+frontend/.cache/
+
+# Frontend - Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Frontend - Environment
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Frontend - IDE
+frontend/.vscode/
+frontend/.idea/
+frontend/.DS_Store
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
+frontend/*.sw?
+
+# OS Files
+.DS_Store
+Thumbs.db
+.trashes
+ehthumbs.db
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+*~
+.#*
+
+# Database Files (if used)
+*.db
+*.sqlite
+*.sqlite3
+backend/data/
+
+# Logs
+logs/
+*.log
+
+# Runtime Data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Package Manager Lock Files (optional - uncomment if you want to track these)
+# package-lock.json
+# yarn.lock
+# poetry.lock
+
+# Misc
+.cache
+.turbo
+dist-ssr
+*.local
+
+.qoder/
