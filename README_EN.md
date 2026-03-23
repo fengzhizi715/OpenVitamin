@@ -354,6 +354,15 @@ Recommended reading by purpose:
 - Some advanced Agent / Workflow capabilities are still evolving
 - Local model directory conventions and runtime dependencies are not fully uniform and still rely on `model.json`
 
+## Contact information
+wechat：fengzhizi715
+
+Email：fengzhizi715@126.com
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="images/wechat_group.JPG" alt="图1" width="48%">
+</div>
+
 ## Contributing
 
 Issues and Pull Requests are welcome. For contribution guidelines, development constraints, and submission expectations, see:
