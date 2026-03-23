@@ -364,7 +364,7 @@ wechat：fengzhizi715
 
 Email：fengzhizi715@126.com
 
-![group](images/wechat_group.JPG)
+![group](images/wechat_group.JPG =200x)
 
 ## 贡献
 
