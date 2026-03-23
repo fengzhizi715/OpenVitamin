@@ -27,15 +27,16 @@
 
 ## 截图
 
-> 可在此处补充产品截图，建议按“先展示核心体验，再展示平台能力”的顺序排列。
+![Chat](images/chat.png)
 
-<!-- Screenshot placeholders
-![Chat](/path/to/chat-screenshot.png)
-![Images](/path/to/images-screenshot.png)
-![Workflow](/path/to/workflow-screenshot.png)
-![Agents](/path/to/agents-screenshot.png)
-![Models](/path/to/models-screenshot.png)
--->
+![Images](images/images.png)
+
+![Workflow](images/workflow.png)
+
+![Agents](images/agents.png)
+
+![Models](images/models.png)
+
 
 ## 适用场景
 
