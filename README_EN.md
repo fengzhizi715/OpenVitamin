@@ -25,15 +25,15 @@
 
 ## Screenshots
 
-> Add screenshots here. Recommended order: show core user experience first, then platform management views.
+![Chat](images/chat.png)
 
-<!-- Screenshot placeholders
-![Chat](/path/to/chat-screenshot.png)
-![Images](/path/to/images-screenshot.png)
-![Workflow](/path/to/workflow-screenshot.png)
-![Agents](/path/to/agents-screenshot.png)
-![Models](/path/to/models-screenshot.png)
--->
+![Images](images/images.png)
+
+![Workflow](images/workflow.png)
+
+![Agents](images/agents.png)
+
+![Models](images/models.png)
 
 ## Use Cases
 
