@@ -1,0 +1,10 @@
+# =============================================================================
+# OpenVitamin 后端依赖（Ubuntu / Linux）
+# 建议在 conda 虚拟环境中安装：pip install -r requirements/ubuntu.txt
+# =============================================================================
+
+-r base.txt
+
+# 说明：
+# - Ubuntu 主路径依赖当前复用 base.txt 中的 Torch / Diffusers / ONNX / ASR 组合
+# - 如需 CUDA 加速，建议先按对应 CUDA 版本安装官方 PyTorch，再执行本文件

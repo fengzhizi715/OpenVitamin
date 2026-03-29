@@ -1,0 +1,16 @@
+# =============================================================================
+# OpenVitamin 后端依赖（Windows）
+# 建议在 conda 虚拟环境中安装：pip install -r requirements/windows.txt
+# =============================================================================
+
+-r base.txt
+
+# Windows 下 base.txt 中的 torch 使用了平台判断，不会自动安装。
+# 如需 VLM / ASR / Diffusers / YOLO 等能力，这里显式补回 torch。
+torch>=2.0.0
+
+# 说明：
+# - sqlite-vec 已在 base.txt 中通过平台判断跳过
+# - 建议优先使用官方 PyTorch 安装说明选择匹配的 CPU / CUDA 版本
+# - faster-whisper、ultralytics、qwen-vl-utils 在 Windows 上可能受 CUDA、Visual C++ 运行库、
+#   本地编译环境或上游 wheel 可用性影响；必要时请按各自官方说明单独安装或降级到对应功能的手动安装路径

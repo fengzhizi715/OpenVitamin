@@ -1,0 +1,113 @@
+# =============================================================================
+# OpenVitamin 后端基础依赖
+# 平台无关或默认共享的依赖放在这里。
+# =============================================================================
+
+# --- Web 框架与 API ---
+fastapi==0.128.0
+uvicorn==0.40.0
+starlette==0.50.0
+python-multipart==0.0.21
+
+# --- JWT 认证 ---
+PyJWT>=2.8.0
+bcrypt>=4.0.0
+
+# --- 数据验证与配置 ---
+pydantic==2.12.5
+pydantic-settings==2.12.0
+pydantic_core==2.41.5
+email-validator>=2.0.0
+
+# --- HTTP 客户端 ---
+httpx==0.28.1
+httpcore==1.0.9
+requests>=2.32.0
+
+# --- 异步与工具 ---
+anyio==4.12.1
+aiofiles==25.1.0
+python-dotenv==1.2.1
+
+# --- 系统与监控 ---
+psutil==7.2.1
+nvidia-ml-py3==7.352.0  # pynvml，NVIDIA GPU 指标（/api/system 等）
+
+# --- 本地 LLM 推理 ---
+llama-cpp-python>=0.3.16
+
+# --- 插件与校验 ---
+jsonschema>=4.23.0
+jinja2>=3.1.0
+
+# --- ORM 与迁移 ---
+sqlalchemy>=2.0.0
+aiosqlite>=0.20.0
+alembic>=1.14.0
+
+# --- 向量搜索（可选；Windows 需额外步骤）---
+sqlite-vec>=0.1.6; platform_system != "Windows"
+
+# --- Embedding Runtime（ONNX）---
+onnxruntime>=1.23.2
+onnx>=1.20.1
+transformers>=5.2.0  # Qwen 3.5 本地 VLM 依赖 transformers>=5.2.0
+tokenizers>=0.22.2
+numpy>=2.4.1
+
+# --- Torch VLM / ASR（可选；Windows 可手动安装）---
+torch>=2.0.0; platform_system != "Windows"
+Pillow>=10.0.0
+einops>=0.8.0
+timm>=1.0.0
+accelerate>=1.0.0
+safetensors>=0.4.0
+diffusers>=0.35.0
+qwen-vl-utils>=0.0.14  # Qwen2-VL / Qwen3-VL 图像处理
+
+# --- 文档解析 ---
+pdfplumber>=0.11.9
+pypdf>=6.6.0
+python-docx>=1.2.0
+
+# --- 时区（time.now 等工具）---
+pytz>=2024.1
+
+# --- Web 搜索（web.search 工具）---
+duckduckgo-search>=7.0.0
+ddgs>=9.10.0
+
+# --- ASR（faster-whisper）---
+faster-whisper>=1.0.0
+openai-whisper
+zhconv>=1.4.3
+
+# --- 目标检测（YOLO）---
+ultralytics>=8.0.0
+
+# --- 开发与测试 ---
+pytest==9.0.2
+pytest-asyncio>=1.0.0
+iniconfig==2.3.0
+pluggy==1.6.0
+
+# --- 以下多为传递依赖，保留以固定版本、便于复现 ---
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.3
+aiosignal==1.4.0
+annotated-types==0.7.0
+attrs==25.4.0
+certifi==2026.1.4
+click==8.3.1
+distro>=1.7.0,<2
+frozenlist==1.8.0
+h11==0.16.0
+idna==3.11
+jiter>=0.10.0
+multidict==6.7.0
+packaging==25.0
+sniffio==1.3.1
+tqdm>4
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+yarl==1.22.0
