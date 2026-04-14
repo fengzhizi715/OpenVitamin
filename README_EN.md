@@ -353,6 +353,7 @@ Recommended reading by purpose:
 - Initial image model loading and first-generation latency can be high
 - Some advanced Agent / Workflow capabilities are still evolving
 - Local model directory conventions and runtime dependencies are not fully uniform and still rely on `model.json`
+- `The open-source version will lag behind the commercial version by 2-4 weeks, or some features may be limited. Please contact us if you require the commercial version.`
 
 ## Contact information
 wechat：fengzhizi715
