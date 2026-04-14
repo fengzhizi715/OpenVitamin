@@ -366,6 +366,7 @@ Email：fengzhizi715@126.com
 
 <div style="display: flex; justify-content: space-between;">
     <img src="images/wechat_group.JPG" alt="图1" width="48%">
+    <img src="images/wechat_tony.JPG" alt="图2" width="48%">
 </div>
 
 
