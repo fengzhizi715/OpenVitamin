@@ -39,6 +39,7 @@ import {
   updateSystemConfig,
   reloadEngine as reloadEngineApi,
   browseDirectory,
+  scanModels,
   type SystemConfig 
 } from '@/services/api'
 import { useSystemMetrics } from '@/composables/useSystemMetrics'
@@ -141,6 +142,7 @@ const handleSave = async (showSuccess = true) => {
   if (showSuccess) isSaving.value = true
   saveError.value = ''
   try {
+    const previousDataDirectory = config.value?.settings?.dataDirectory ?? config.value?.local_model_directory
     await updateSystemConfig({
       offlineMode: offlineMode.value,
       theme: theme.value,
@@ -150,6 +152,10 @@ const handleSave = async (showSuccess = true) => {
       dataDirectory: dataDirectory.value,
       language: language.value,
     })
+
+    if (dataDirectory.value !== previousDataDirectory) {
+      await scanModels()
+    }
     
     await fetchStatus(true)
     

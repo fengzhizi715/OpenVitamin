@@ -150,10 +150,18 @@ async def browse_directory():
             if proc.returncode == 0:
                 return {"path": stdout.decode().strip()}
         elif system == "Windows":
-            # Windows powershell snippet for folder picker
-            cmd = 'powershell.exe -NoProfile -Command "& { $app = New-Object -ComObject Shell.Application; $folder = $app.BrowseForFolder(0, \'Select Local Model Directory\', 0); if ($folder) { $folder.Self.Path } }"'
-            proc = await asyncio.create_subprocess_shell(
-                cmd,
+            # Avoid cmd.exe quoting rules when passing the PowerShell script.
+            script = (
+                "Add-Type -AssemblyName System.Windows.Forms; "
+                "$dialog = New-Object System.Windows.Forms.FolderBrowserDialog; "
+                "if ($dialog.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) "
+                "{ $dialog.SelectedPath }"
+            )
+            proc = await asyncio.create_subprocess_exec(
+                "powershell.exe",
+                "-NoProfile",
+                "-Command",
+                script,
                 stdout=asyncio.subprocess.PIPE,
                 stderr=asyncio.subprocess.PIPE
             )
